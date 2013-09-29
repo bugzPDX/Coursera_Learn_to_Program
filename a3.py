@@ -36,7 +36,10 @@ def make_str_from_row(board, row_index):
     >>> make_str_from_row([['A', 'N', 'T', 'T'], ['X', 'S', 'O', 'B']], 0)
     'ANTT'
     """
-
+    row = ''
+    for c in board[row_index]:
+        row += c
+    return row
 
 def make_str_from_column(board, column_index):
     """ (list of list of str, int) -> str
