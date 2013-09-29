@@ -133,6 +133,17 @@ def word_score(word):
     16
     """
 
+    word_len = len(word)
+    
+    if word_len < 3:
+        return 0
+    if word_len < 7:
+        return word_len
+    if word_len < 10:
+        return word_len*2
+    return word_len*3
+            
+
 
 def update_score(player_info, word):
     """ ([str, int] list, str) -> NoneType
