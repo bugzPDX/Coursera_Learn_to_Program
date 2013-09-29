@@ -51,6 +51,16 @@ def make_str_from_column(board, column_index):
     'NS'
     """
 
+    column = ''
+    
+    for row in board:
+        
+        column += row[column_index]
+            
+    return column
+        
+        
+
 
 def board_contains_word_in_row(board, word):
     """ (list of list of str, str) -> bool
