@@ -26,6 +26,8 @@ def is_valid_word(wordlist, word):
         if w == word:
             return True
 
+    return False    
+
 
 def make_str_from_row(board, row_index):
     """ (list of list of str, int) -> str
@@ -95,6 +97,11 @@ def board_contains_word_in_column(board, word):
     False
     """
 
+    for column_index in range(len(board[0])):
+        if word in make_str_from_column(board, column_index):
+            return True
+        
+    return False    
 
 def board_contains_word(board, word):
     """ (list of list of str, str) -> bool
