@@ -22,6 +22,9 @@ def is_valid_word(wordlist, word):
     >>> is_valid_word(['ANT', 'BOX', 'SOB', 'TO'], 'TO')
     True
     """
+    for w in wordlist:
+        if w == word:
+            return True
 
 
 def make_str_from_row(board, row_index):
