@@ -182,6 +182,12 @@ def read_words(words_file):
     Precondition: Each line of the file contains a word in uppercase characters
     from the standard English alphabet.
     """
+    words_list = []
+    for word in words_file:
+       # words_file.readline()
+        words_list.append(word.rstrip('\n'))
+    
+    return words_list
 
 
 def read_board(board_file):
@@ -190,4 +196,8 @@ def read_board(board_file):
     Return a board read from open file board_file. The board file will contain
     one row of the board per line. Newlines are not included in the board.
     """
+    board = []
+    for word in board_file:
+        board.append(list(word.rstrip('\n')))
 
+    return board    
