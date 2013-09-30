@@ -164,6 +164,13 @@ def num_words_on_board(board, words):
     >>> num_words_on_board([['A', 'N', 'T', 'T'], ['X', 'S', 'O', 'B']], ['ANT', 'BOX', 'SOB', 'TO'])
     3
     """
+    count = 0
+    for word in words:
+        if board_contains_word(board, word):
+            count += 1
+
+    return count        
+        
 
 
 def read_words(words_file):
