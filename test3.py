@@ -1,6 +1,7 @@
 def do_twice(f,g):
     f(g)
     f(g)
+    
 
 def do_four(f,g):
     do_twice(f,g)
@@ -32,14 +33,11 @@ def print_grid():
 
 
 def print_big_grid():
+    x = 0
     horiz = ('+ - - - - '*4 + '+')
     vert = ('|         '*4 + '|')
-    print(horiz)
-    do_four(print_twice,vert)
-    print(horiz)
-    do_four(print_twice,vert)
-    print(horiz)
-    do_four(print_twice,vert)
-    print(horiz)
-    do_four(print_twice,vert)
+    while x < 5:
+        print(horiz)
+        do_four(print_twice,vert)
+        x += 1
     print(horiz)
